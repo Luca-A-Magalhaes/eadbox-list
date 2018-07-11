@@ -1,27 +1,18 @@
 import { Injectable  } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
-const httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
-
+// Servico para fazer a comunicacao com a API REST
 @Injectable()
 export class AppService{
 
-  protected url : string = '/api/courses';
+  // Ponto de acesso de listagem dos cursos
+  protected courses : string = '/api/courses';
 
   constructor(private http: HttpClient) {}
 
-  // Rest Items Service: Read all REST Items
+  // Lista todos os cursos
   getAll() {
-    return this.http
-      .get<any[]>(this.url, httpOptions);
-    //   .pipe(map((obj, i) => ({
-    //       url: "http://escola-do-luca.eadbox.com/ng/student/courses/" + obj[i].course_slug,
-    //       titulo: obj[i].title,
-    //       descricao: obj[i].description
-    //   })));
+    return this.http.get<any[]>(this.courses);
   }
 
 }
