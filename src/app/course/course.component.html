@@ -1,7 +1,9 @@
 <div class="list-item">
   <h2 class="item-title" [class.active]="selected" (click)="OnClick()">{{course.titulo}}</h2>
   <div class="item-body" *ngIf="selected">
-    <img class="item-logo" src={{course.logo}}>
+    <div class="item-logo">
+        <img src={{course.logo}}>
+    </div>
     <div class="item-content">
         <p class="item-counter">Numero de aulas: <span>{{course.aulas}}</span></p>
         <span class="item-label">Descrição:</span>

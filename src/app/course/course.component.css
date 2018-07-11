@@ -22,6 +22,11 @@
     padding: 1%;
 }
 
+.item-logo>img{
+    max-width: 100%;
+    height: auto;
+}
+
 .item-counter>span{
     font-weight: bold;
 }
