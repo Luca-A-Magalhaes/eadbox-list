@@ -1,0 +1,8 @@
+{
+    "/api": {
+        "target": "http://escola-do-luca.eadbox.com/api",
+        "secured": false,
+        "changeOrigin": true,
+        "pathRewrite": {"^/api" : ""}
+    }
+}
