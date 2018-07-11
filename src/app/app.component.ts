@@ -7,7 +7,7 @@ import { AppService } from './app.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'app';
+  loading = false;
   listCourses: any[] = [];
 
   constructor(private appService: AppService) {}
@@ -26,13 +26,12 @@ export class AppComponent implements OnInit {
         aulas: obj.lectures.length,
         logo: obj.logo_url
       }));
-      
-      // this.listCourses = [];
+      this.loading = false;
     })
   }
 
   OnUpdate(): void{
-    this.listCourses = [];
+    this.loading = true;
     this.getRestItems();
   }
 }

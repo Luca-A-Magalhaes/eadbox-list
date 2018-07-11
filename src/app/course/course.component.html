@@ -1,11 +1,11 @@
 <div class="list-item">
-  <h2 class="item-title" (click)="OnClick()">{{course.titulo}}</h2>
+  <h2 class="item-title" [class.active]="selected" (click)="OnClick()">{{course.titulo}}</h2>
   <div class="item-body" *ngIf="selected">
     <img class="item-logo" src={{course.logo}}>
     <div class="item-content">
         <p class="item-counter">Numero de aulas: <span>{{course.aulas}}</span></p>
         <span class="item-label">Descrição:</span>
-        <p>{{course.descricao || "Nenhuma descrição"}}</p>
+        <p style="font-style: italic">{{course.descricao || "Nenhuma descrição"}}</p>
         <a class="item-btn" href={{course.url}} target="_blank">Confira!</a>
     </div>
   </div>

@@ -1,5 +1,15 @@
+.list-item{
+    border-bottom: 1px solid #ccc;
+    margin:0;
+}
 .item-title{
     cursor: pointer;
+    padding: 1% 2%;
+    margin:0;
+    transition: background-color 0.2s 0s ease-in-out;
+}
+.item-title:hover, .item-title.active{
+    background-color: #eee;
 }
 
 .item-body{

@@ -5,6 +5,9 @@
 </div>
 <div class="body">
   <h2>Aqui estão os cursos publicados até o momento:</h2>
+  <div *ngIf="loading">
+    <app-loader></app-loader>
+  </div>
   <app-courses-list [list]="listCourses" ></app-courses-list>
   <button (click)="OnUpdate()" class="button">Atualizar</button>
 </div>
