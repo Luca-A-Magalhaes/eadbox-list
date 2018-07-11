@@ -1,0 +1,31 @@
+.item-title{
+    cursor: pointer;
+}
+
+.item-body{
+    display: flex;
+    flex-direction: row;
+}
+
+.item-logo, .item-content{
+    flex: 1;
+    padding: 1%;
+}
+
+.item-counter>span{
+    font-weight: bold;
+}
+.item-label{
+    font-weight: bold;
+}
+.item-btn{
+    text-decoration: none;
+    color: white;
+    background-color: darkorange;
+    padding: 1% 2%;
+}
+
+.item-btn:visited{
+    text-decoration: none;
+    color: white;
+}

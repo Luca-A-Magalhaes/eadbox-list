@@ -1,0 +1,28 @@
+.header-nav{
+    background-color: rgb(28, 99, 231);
+    color: white;
+    text-align: center;
+    padding: 2% 5%;
+}
+
+.body{
+    width: 90%;
+    margin: auto;
+}
+
+.button{
+    background-color: rgb(28, 99, 231);
+    color: white;
+    border: none;
+    padding: 1% 2%;
+    cursor: pointer;
+    box-shadow: 0px 2px 7px #aaa;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+.button:active{
+    background-color: rgb(24, 85, 197);
+    border: none;
+}

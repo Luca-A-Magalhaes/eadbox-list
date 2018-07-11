@@ -8,7 +8,7 @@ import { AppService } from './app.service';
 })
 export class AppComponent implements OnInit {
   title = 'app';
-  restItems: any;
+  listCourses: any[] = [];
 
   constructor(private appService: AppService) {}
 
@@ -18,8 +18,21 @@ export class AppComponent implements OnInit {
 
   getRestItems(): void{
     this.appService.getAll().subscribe(restItems => {
-      this.restItems = restItems;
-      console.log(this.restItems);
+      this.listCourses = restItems.map(obj => ({
+        id: obj.course_id,
+        url: "http://escola-do-luca.eadbox.com/ng/student/courses/" + obj.course_slug,
+        titulo: obj.title,
+        descricao: obj.description,
+        aulas: obj.lectures.length,
+        logo: obj.logo_url
+      }));
+      
+      // this.listCourses = [];
     })
+  }
+
+  OnUpdate(): void{
+    this.listCourses = [];
+    this.getRestItems();
   }
 }

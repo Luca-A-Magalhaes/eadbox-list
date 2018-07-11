@@ -16,12 +16,12 @@ export class AppService{
   // Rest Items Service: Read all REST Items
   getAll() {
     return this.http
-      .get<any[]>(this.url, httpOptions)
-      .pipe(map((obj, i) => ({
-          url: "http://escola-do-luca.eadbox.com/ng/student/courses/" + obj[i].course_slug,
-          titulo: obj[i].title,
-          descricao: obj[i].description
-      })));
+      .get<any[]>(this.url, httpOptions);
+    //   .pipe(map((obj, i) => ({
+    //       url: "http://escola-do-luca.eadbox.com/ng/student/courses/" + obj[i].course_slug,
+    //       titulo: obj[i].title,
+    //       descricao: obj[i].description
+    //   })));
   }
 
 }

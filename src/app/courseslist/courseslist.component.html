@@ -1,0 +1,6 @@
+<div class="courses-list">
+  <div *ngIf="list.length; else empty">
+      <app-course-item *ngFor="let course of list" [course]="course" ></app-course-item>
+  </div>
+  <ng-template #empty>Nenhum curso encontrado!</ng-template>
+</div>
