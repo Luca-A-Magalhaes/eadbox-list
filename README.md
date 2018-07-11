@@ -33,4 +33,4 @@ Desenvolvido por [Luca Almeida Magalhães](https://linkedin.com/in/luca-almeida-
 ### Notas
 
 A aplicação faz uso do proxy do webpack para contornar problemas com CORS.  
-O proxy esta configurado no arquivo ./proxyconfig.json
+O proxy esta configurado no arquivo **./proxyconfig.json**
